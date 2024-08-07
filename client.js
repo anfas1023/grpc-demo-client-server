@@ -8,10 +8,11 @@ const client=new todopackage.Todo("0.0.0.0:40000",
     grpc.credentials.createInsecure()
 )
 
+const data=process.argv[2]
 
 client.createTodo({
     "id":-1,
-    "text":"Do Lauandary"
+    "text":data
 },(err,response)=>{
     if(err) console.log(err);
     
